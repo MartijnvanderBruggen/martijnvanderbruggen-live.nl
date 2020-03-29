@@ -12,9 +12,7 @@
 						</div>
 <div class="kt-header__topbar">
 
-							<!--begin: Search -->
-
-							<!--begin: Search -->
+							@auth
 							<div class="kt-header__topbar-item kt-header__topbar-item--search dropdown" id="kt_quick_search_toggle">
 								<div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
 									<span class="kt-header__topbar-icon">
@@ -583,7 +581,7 @@
 									</ul>
 								</div>
 							</div>
-
+							@endauth
 							<!--end: Language bar -->
 
 							<!--begin: User Bar -->
@@ -603,9 +601,11 @@
 									</div>
 								</div>
 								@else
-								<div class="kt-header__topbar-user">
-									<span class="kt-header__topbar-welcome kt-hidden-mobile">Please login or register first.</span>
-								</div>
+    								@guest
+    								<div class="kt-header__topbar-user" id="login">
+    									<a href="/" target="_current"><span class="kt-header__topbar-welcome kt-hidden-mobile">Login</span></a>
+    								</div>
+    								@endguest
 								@endif
 								@if(auth()->user())
 								<div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-xl">
@@ -696,7 +696,7 @@
 											</div>
 										</a>
 										<div class="kt-notification__custom kt-space-between">
-											<a href="custom/user/login-v2.html" target="_blank" class="btn btn-label btn-label-brand btn-sm btn-bold">Sign Out</a>
+											<a href="{{route('logout')}}" target="_current" class="btn btn-label btn-label-brand btn-sm btn-bold">Sign Out</a>
 											<a href="custom/user/login-v2.html" target="_blank" class="btn btn-clean btn-sm btn-bold">Upgrade Plan</a>
 										</div>
 									</div>

@@ -20,6 +20,7 @@ window.Chart = require("chart.js");
 window.Raphael = require("raphael");
 window.Cookies = require("js-cookie");
 window.Popper = require("popper.js");
+window.Datatable = require("datatables.net");
 require("jquery-form");
 
 // Toastr

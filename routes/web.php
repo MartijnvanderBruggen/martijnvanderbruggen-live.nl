@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +18,11 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/logout', function () {
+    return redirect('/')->with(Auth::logout());
+});  
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('showLogo', 'ImageController@showLogo')->name('showLogo');

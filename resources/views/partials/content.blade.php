@@ -1,12 +1,6 @@
-<div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
-
-						
+<div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">						
 	<!-- begin:: Content -->
-	<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
-
-		<!--Begin::Dashboard 1-->							
-
-		<!--Begin::Row-->
+	<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">		
 		<div class="row">
 			<div class="col-xl-8 col-lg-12 order-lg-3 order-xl-1">				
 				@component('components.tickets')
@@ -41,11 +35,6 @@
 				@endcomponent
 			</div>
 		</div>
-
-		<!--End::Row-->
-
-		<!--End::Dashboard 1-->
 	</div>
-
 	<!-- end:: Content -->
 </div>

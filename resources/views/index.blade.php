@@ -9,7 +9,12 @@
 @stop
 
 @section('content')
-	@include('partials.content')
+	@auth
+		@include('partials.content')
+	@endauth
+	@guest
+    	@include('auth.login')
+	@endguest
 @stop
 
 @section('footer')
